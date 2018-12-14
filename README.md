@@ -1,4 +1,4 @@
-# eArchvie
+# Group 12 eArchvie
 
 Code Readme 
 http://ec2-18-221-234-28.us-east-2.compute.amazonaws.com/SoftwareEngineering/
