@@ -1,4 +1,7 @@
 <?php
+//written by: Christain Reed
+//tested by: Christain Reed
+//debugged by: Christain Reed
 require_once "../db.conf";
 require_once('dbcontroller.php');
 if(empty($_SESSION)){    
