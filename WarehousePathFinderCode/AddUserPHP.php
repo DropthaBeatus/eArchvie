@@ -1,4 +1,9 @@
 <?php
+<!--
+//written by: Parker Jones and Mitchell Hoffman
+//tested by: Parker Jones and Mitchell Hoffman
+//debugged by: Parker Jones, Mitchell Hoffman and Christain Reed
+      
 require_once "../db.conf";
 require_once('dbcontroller.php');
 if(!empty($_SESSION)){    
