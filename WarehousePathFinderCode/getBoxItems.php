@@ -1,4 +1,8 @@
 <?php
+//written by: Liam Flaherty
+//tested by: Liam Flaherty
+//debugged by: Liam Flaherty
+
 require_once "../db.conf";
 require_once('dbcontroller.php');
 
