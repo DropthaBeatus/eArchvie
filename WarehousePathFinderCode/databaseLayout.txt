@@ -1,0 +1,25 @@
+Database Layout
+
+StoreItems ( id int primary key auto_increment, WarehouseID varchar(255) NOT NULL, itemCode varchar(255) NOT NULL, itemName varchar(255) NOT NULL, itemQuantity int, itemCost FLOAT, itemLocX int, itemLocY int );
+
+Used in Warehouse.html in the popup box when the user clicks a specific grid. Enter 
+
+Orders( id int primary key auto_increment, orderID varchar(255) NOT NULL, itemCode varchar(255) NOT NULL, itemName varchar(255) NOT NULL, itemQuantity int );
+
+We did not get a way to check user input here so a good input here should be: "itemCode1234", "Samsung Galaxy 7", 150.00, 15. This will add the item to the warehouse in that exact spot when the user reloads the webpage. 
+This database will default not be used as orders can not be completed from the shopping via SplashPage.php and Search.php
+
+Warehouse ( WarehouseID varchar(255) primary key, warehouseName varchar(255), warehouseHeight int, warehouseLength int );
+
+This database will only be read in Warehouse.html and not created as we did not get enough time to add to this database.
+
+Users ( id int primary key auto_increment, user varchar(255) NOT NULL, Passworduser varchar(255) NOT NULL, adminCred varchar(255), WarehouseID varchar(255), warehouseName varchar(255) );
+
+In AddUser.html a you can add the following into the form: "TestingUser123", "Password123", "TemporaryWarehouse", "TempWarehouse",  Manager. This will add a default user into the database. Logout out by clicking the box at the bottom left and then log in with the created credentials. This then will add a user to a specified warehouse that is already created called TemporaryWarehouse.
+This database will be important in index.html, login.php, AddUser.html, and AddUser.php.  
+
+Items ( itemCode varchar(255) primary key NOT NULL, itemName varchar(255) NOT NULL, itemQuantity int, itemCost FLOAT );
+
+Example Insets into PHP scripts (Users do not see this): insert into Items(itemCode, itemName, itemQuantity, itemCost) values("XYZ", "Motherboard - AMD4", 3, "55.72"); insert into Users( user, passwordUser, adminCred, WarehouseID, warehouseName) values ('user' , 'pass', 'ADMIN' ,'TemporaryWarehouse' , 'TempWareHouse');
+
+insert into Warehouse(WarehouseID, warehouseName, warehouseHeight, warehouseLength) values ('TemporaryWarehouse' , 'TempWareHouse', 100, 100 ); insert into Orders(id, orderID, itemCode, itemName, itemQuantity) values(0, '123412341234', "CD134adfYIs", "Samsung USB 3.0 128GB", 12); insert into StoreItems( id, WarehouseID, itemCode, itemName, itemQuantity, itemCost, itemLocX, itemLocY) values(0, 'TemporaryWarehouse', "CD134adfYIs", "Samsung USB 3.0 128GB", 243, "43.79", 1, 1);
