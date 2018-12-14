@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
+<!--
+written by: Parker Jones, Mitchell Hoffman 
+tested by: Parker Jones, Mitchell Hoffman 
+debugged by: Parker Jones, Mitchell Hoffman 
+-->
 <html>
     <head>
         <title>Add User</title>
